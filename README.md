@@ -26,7 +26,7 @@ TPF/
 │   │   │   ├── API_lcd.h           <-- Funciones de alto nivel del display
 │   │   │   ├── API_mpu6050.h       <-- Funciones de alto nivel de la IMU
 │   │   │   ├── API_uart.h          <-- Driver de comunicación serie
-│   │   │   ├── API_cmdparser.h     <-- Procesador de comandos (Opcional)
+│   │   │   ├── API_cmdparser.h     <-- Procesador de comandos 
 │   │   │   ├── APILCD_port.h       <-- Interfaz de bajo nivel del LCD (PCSE)
 │   │   │   └── MPU_port.h          <-- Interfaz de bajo nivel de la IMU (PCSE)
 │   │   └── Src/                    <-- Implementación de Capas
