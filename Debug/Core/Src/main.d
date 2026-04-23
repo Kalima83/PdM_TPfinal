@@ -27,12 +27,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_delay.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_lcd.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_mpu6050.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_uart.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_cmdparser.h \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_debounce.h
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_delay.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_lcd.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_mpu6050.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_uart.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_cmdparser.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_debounce.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -62,9 +62,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_delay.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_lcd.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_mpu6050.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_uart.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_cmdparser.h:
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_debounce.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_delay.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_lcd.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_mpu6050.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_uart.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_cmdparser.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_debounce.h:

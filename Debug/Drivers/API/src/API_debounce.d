@@ -1,5 +1,5 @@
 Drivers/API/src/API_debounce.o: ../Drivers/API/src/API_debounce.c \
- C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_debounce.h \
+ C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_debounce.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,7 +29,7 @@ Drivers/API/src/API_debounce.o: ../Drivers/API/src/API_debounce.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/main.h
-C:/Users/danie/OneDrive/SE/PdM/PdM_workspace/TPF/Drivers/API/inc/API_debounce.h:
+C:/Users/danie/OneDrive/SE/PdM/TPfinal/Drivers/API/inc/API_debounce.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

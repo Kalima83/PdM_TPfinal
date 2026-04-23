@@ -55,7 +55,7 @@ void delayWrite( delay_t * delay, tick_t duration ) {
    }
 }
 
-// Punto 3
+
 /**
  * @brief Verifica si el delay se encuentra en ejecución.
  * @param delay: puntero a la estructura del delay.
