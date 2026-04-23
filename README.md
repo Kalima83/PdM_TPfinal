@@ -6,15 +6,24 @@ El TPF se diseñó siguiendo un modelo de capas para garantizar la independencia
 ### Capa de Aplicación (main.c):
 Implementa la lógica de control mediante una Máquina de Estados Finitos (MEF) que gestiona los estados del sistema.
 ### Capa de API (Alto Nivel):
-Proporciona funciones de nivel de aplicación para el manejo del LCD (API_lcd), la MPU6050 (API_mpu6050) y la gestión de tiempos no bloqueantes (API_delay).
+ * Funciones de nivel de aplicación: proporciona interfaces para el manejo del LCD (API_lcd), la MPU6050 (API_mpu6050), la gestión de tiempos no bloqueantes (API_delay) y la comunicación serie (API_uart).
+ * Procesamiento de Comandos (API_cmdparser): implementa un analizador sintáctico no bloqueante que evalúa la entrada de la consola UART para ejecutar acciones a distancia (iniciar/parar la lectura con la tecla 's' o 'S').
 ### Capa de Portabilidad (Bajo Nivel / Port):
 Archivos APILCD_port y MPU_port que encapsulan las llamadas a la biblioteca HAL de ST y la configuración específica del protocolo I2C. Esta capa aísla la complejidad del hardware y permite migrar el proyecto a otros microcontroladores o buses de comunicación sin modificar la lógica de alto nivel.
 ### Lógica de Control (MEF)
 El sistema opera bajo una MEF robusta con los siguientes estados:
-  * ESTADO_INIT_CALIB: Inicialización de periféricos y calibración de los sensores (MPU6050).
-  * ESTADO_IDLE: Estado de espera de baja actividad hasta que se detecta la pulsación del botón de usuario (B1).
-  * ESTADO_READING: Adquisición de datos de acelerometría y giro en tiempo real, con actualización visual en el display LCD mediante retardos no bloqueantes.
+  * ESTADO_INIT_CALIB: inicialización de periféricos y calibración del sensor MPU6050.
+  * ESTADO_IDLE: estado de espera de baja actividad. El sistema aguarda una señal de inicio (Hardware 'B1' o Software 's').
+  * ESTADO_READING: Adquisición de datos de acelerometría y giro en tiempo real. Este estado implementa un diseño estrictamente no bloqueante (eliminación de jitter I2C) para garantizar la ejecución paralela de tres tareas:
+    * Actualización de la pantalla LCD.
+    * Transmisión de telemetría vía UART (usando retorno de carro \r para limpieza de línea).
+    * Evaluación de riesgos espaciales para el control de la Alarma Visual.
   * ESTADO_ERROR: Gestión de excepciones ante fallos de comunicación en el bus I2C. El sistema notifica el error y realiza un reintento automático de inicialización para garantizar la disponibilidad del equipo.
+### Interfaz de Usuario y Alarma Visual
+El proyecto incorpora un sistema de retroalimentación visual mediante el LED de la placa (LD2), el cual refleja el estado operativo y de seguridad del sistema en tiempo real:
+ * Apagado (OFF): El sistema se encuentra en calibración o en espera (ESTADO_IDLE). No hay lectura activa de la IMU.
+ * Encendido Fijo (ON): El sistema está leyendo y transmitiendo datos (ESTADO_READING), y la inclinación de la placa se encuentra dentro de los parámetros de seguridad (Rango operativo normal: ±20°).
+ * Parpadeo Rápido (TOGGLE): Alerta crítica por inclinación. El ángulo absoluto en los ejes X o Y supera el umbral de seguridad (20°). El parpadeo se ejecuta de forma asíncrona mediante retardos por software.
 
 ## Estructura
 ```
