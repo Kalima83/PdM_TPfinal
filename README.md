@@ -1,4 +1,4 @@
-# PdM_TPfinal
+# TP Final
 Este repositorio contiene la documentación del TP final de la materia Programación de Microcontroladores (PdM) -  Protocolos de comunicación en S.E. (PCSE) del CESE
 
 ## Arquitectura de Software y Capas de Abstracción
